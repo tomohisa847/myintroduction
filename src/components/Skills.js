@@ -9,7 +9,7 @@ function Skills() {
         <li>JavaScript / React / Node.js</li>
         <li>HTML / CSS / SASS</li>
         <li>Git / GitHub</li>
-        <li>Python / Django</li>
+        <li>Python aa/ Django</li>
       </ul>
     </section>
   );
