@@ -4,38 +4,44 @@ function Skills() {
   const skillsData = [
     {
       name: "React",
-      image: "https://reactjs.org/logo-og.png", // 各スキルの画像URL
-      description: "このポートフォリオを作成した言語です。",
-      level: 4,
+      image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+      description: "このWebサイトを作成するのに使用しました。",
+      level: 2,
     },
     {
-      name: "TypeScript",
-      image: "https://www.typescriptlang.org/icons/icon-512x512.png",
-      description: "新規開発ではTypeScriptを使用しています。",
+      name: "C言語",
+      image: "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg",
+      description: "低レベルのプログラミングとアルゴリズムに使用しています。",
       level: 3,
     },
     {
-      name: "Styled-Components",
-      image: "https://styled-components.com/logo.png",
-      description: "CSS in JSのためのライブラリです。",
-      level: 4,
-    },
-    {
-      name: "Material-UI",
-      image: "https://material-ui.com/static/logo.png",
-      description: "React用のコンポーネントライブラリです。",
+      name: "C#",
+      image: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Csharp_Logo.png",
+      description: "ゲーム開発やWindowsアプリケーションで使用しています。",
       level: 3,
     },
     {
-      name: "Laravel",
-      image: "https://laravel.com/img/logotype.min.svg",
-      description: "PHP用のMVCフレームワークです。",
-      level: 4,
+      name: "Python",
+      image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+      description: "データ分析とスクリプト作成に使用しています。",
+      level: 3,
     },
     {
-      name: "PHP",
-      image: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg",
-      description: "バックエンド開発に使用しています。",
+      name: "HTML/CSS",
+      image: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+      description: "ウェブページの構築に使用しています。",
+      level: 3,
+    },
+    {
+      name: "Python Flask",
+      image: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg",
+      description: "バックエンドのWebアプリケーション開発に使用しています。",
+      level: 3,
+    },
+    {
+      name: "Java",
+      image: "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg",
+      description: "授業のモバイルデバイス開発に使用しました。",
       level: 2,
     },
   ];
@@ -102,7 +108,7 @@ const styles = {
     margin: "10px 0",
   },
   rating: {
-    fontSize: "1.2em",
+    fontSize: "1.7em",
     color: "#FFD700", // 星を黄色にする
     marginBottom: "10px",
   },
