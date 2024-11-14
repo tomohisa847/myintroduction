@@ -3,21 +3,33 @@ import React, { useState } from "react";
 const experiencesData = [
   {
     name: "プロジェクトA",
-    image: "https://via.placeholder.com/150", // プロジェクト画像のURL
+    images: [
+      "https://via.placeholder.com/150",
+      "https://via.placeholder.com/150",
+      "https://via.placeholder.com/150",
+    ],
     description: "プロジェクトAの詳細な説明がここに入ります。",
     link: "https://example.com",
   },
   {
     name: "プロジェクトB",
-    image: "https://via.placeholder.com/150",
+    images: [
+      "https://via.placeholder.com/150",
+      "https://via.placeholder.com/150",
+      "https://via.placeholder.com/150",
+    ],
     description: "プロジェクトBの詳細な説明がここに入ります。",
     link: "https://example.com",
   },
   {
     name: "プロジェクトC",
-    image: "https://via.placeholder.com/150",
+    images: [
+      "https://via.placeholder.com/150",
+      "https://via.placeholder.com/150",
+      "https://via.placeholder.com/150",
+    ],
     description: "プロジェクトCの詳細な説明がここに入ります。",
-    link: null, // リンクがない場合
+    link: null,
   },
 ];
 
@@ -35,7 +47,7 @@ function Experience() {
 }
 
 function ExperienceCard({ experience }) {
-  const [showImage, setShowImage] = useState(false);
+  const [showImages, setShowImages] = useState(false);
   const [showDescription, setShowDescription] = useState(false);
   const [showLink, setShowLink] = useState(false);
 
@@ -43,32 +55,36 @@ function ExperienceCard({ experience }) {
     <div style={styles.card}>
       <h3 style={styles.projectName}>{experience.name}</h3>
 
-      <button style={styles.button} onClick={() => setShowImage(!showImage)}>
-        {showImage ? "画像を隠す" : "画像を表示"}
-      </button>
-      {showImage && (
-        <div style={styles.imageContainer}>
-          <img src={experience.image} alt={experience.name} style={styles.image} />
-        </div>
-      )}
-
-      <button style={styles.button} onClick={() => setShowDescription(!showDescription)}>
-        {showDescription ? "詳細を隠す" : "詳細を表示"}
-      </button>
-      {showDescription && <p style={styles.description}>{experience.description}</p>}
-
-      {experience.link && (
-        <button style={styles.button} onClick={() => setShowLink(!showLink)}>
-          {showLink ? "リンクを隠す" : "リンクを表示"}
+      <div style={styles.buttonContainer}>
+        <button style={styles.button} onClick={() => setShowImages(!showImages)}>
+          {showImages ? "画像を隠す" : "画像を表示"}
         </button>
-      )}
-      {showLink && experience.link && (
-        <p style={styles.link}>
-          <a href={experience.link} target="_blank" rel="noopener noreferrer">
-            {experience.link}
-          </a>
-        </p>
-      )}
+        {showImages && (
+          <div style={styles.imageContainer}>
+            {experience.images.map((image, index) => (
+              <img key={index} src={image} alt={`${experience.name} ${index + 1}`} style={styles.image} />
+            ))}
+          </div>
+        )}
+
+        <button style={styles.button} onClick={() => setShowDescription(!showDescription)}>
+          {showDescription ? "詳細を隠す" : "詳細を表示"}
+        </button>
+        {showDescription && <p style={styles.description}>{experience.description}</p>}
+
+        {experience.link && (
+          <button style={styles.button} onClick={() => setShowLink(!showLink)}>
+            {showLink ? "リンクを隠す" : "リンクを表示"}
+          </button>
+        )}
+        {showLink && experience.link && (
+          <p style={styles.link}>
+            <a href={experience.link} target="_blank" rel="noopener noreferrer">
+              {experience.link}
+            </a>
+          </p>
+        )}
+      </div>
     </div>
   );
 }
@@ -78,6 +94,8 @@ const styles = {
     padding: "20px",
     backgroundColor: "#f0f4f8",
     color: "#333",
+    display: "flex",
+    justifyContent: "center",
   },
   title: {
     textAlign: "center",
@@ -85,10 +103,11 @@ const styles = {
     fontSize: "2em",
   },
   experiencesContainer: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    display: "flex",
+    flexDirection: "column",
     gap: "20px",
-    maxWidth: "1000px",
+    width: "90vw",
+    maxWidth: "800px",
     margin: "0 auto",
   },
   card: {
@@ -104,6 +123,13 @@ const styles = {
     fontSize: "1.5em",
     margin: "10px 0",
   },
+  buttonContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    gap: "10px",
+    marginTop: "10px",
+  },
   button: {
     backgroundColor: "#3b82f6",
     color: "white",
@@ -111,18 +137,18 @@ const styles = {
     padding: "8px 15px",
     cursor: "pointer",
     borderRadius: "5px",
-    marginTop: "10px",
     fontSize: "0.9em",
+    width: "100%",
     transition: "background-color 0.3s",
-  },
-  buttonHover: {
-    backgroundColor: "#2563eb",
   },
   imageContainer: {
     marginTop: "10px",
+    display: "flex", // 横並びにする
+    gap: "10px", // 画像間のスペース
+    justifyContent: "center",
   },
   image: {
-    width: "100%",
+    width: "230px", // 固定幅で3枚表示が美しくなるように設定
     borderRadius: "8px",
   },
   description: {
