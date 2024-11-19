@@ -3,24 +3,25 @@ import "./Axis.css";
 
 const timelineData = [
   {
-    label: "軸1",
+    label: "ベンチャー気質のある企業",
     events: [
-      { title: "イベントA1", description: "イベントA1の詳細説明です。" },
-      { title: "イベントA2", description: "イベントA2の詳細説明です。" },
+      { title: "成長する意欲", description: "何に対しても挑戦し勢いがある会社が自身の気質に合っているため" },
+      { title: "学ぶ環境", description: "常に学びながら不完全ながらも成長する事が自身の気質に合っているため" },
     ],
   },
   {
-    label: "軸2",
+    label: "自動車業界(システム)",
     events: [
-      { title: "イベントB1", description: "イベントB1の詳細説明です。" },
-      { title: "イベントB2", description: "イベントB2の詳細説明です。" },
+      { title: "自動車大好き", description: "毎日中古車を探したり、良くドライブに行きます。" },
+      { title: "自動車業界に行きたい", description: "自動車がどのように動くのかを仕事をしていく中で学びたいから" },
+      { title: "大学の授業で",description: "組み込みシステム開発の授業が自身の興味を引きたてたため"},
     ],
   },
   {
-    label: "軸3",
+    label: "若手がリーダーとなり活躍している",
     events: [
-      { title: "イベントC1", description: "イベントC1の詳細説明です。" },
-      { title: "イベントC2", description: "イベントC2の詳細説明です。" },
+      { title: "リーダとは", description: "皆を同じビジョンに引き連れていくためにはリーダー力が必要だから" },
+      { title: "責任の重要性", description: "責任を伴うことは自身の経験において成果を上げてきたから" },
     ],
   },
 ];
@@ -28,7 +29,7 @@ const timelineData = [
 function Axis() {
   return (
     <section className="axis-section">
-      <h2 className="axis-title">ポートフォリオ</h2>
+      <h2 className="axis-title">就活の軸</h2>
       <div className="timeline-container">
         {timelineData.map((timeline, index) => (
           <SingleTimeline key={index} timeline={timeline} />

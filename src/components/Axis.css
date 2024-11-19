@@ -1,13 +1,14 @@
 .axis-section {
-	padding: 40px 20px;
+	padding: 80px 20px; /* セクション全体の上部の余白を広げる */
 	background-color: #f9f9f9;
 	text-align: center;
 	font-family: Arial, sans-serif;
   }
   
   .axis-title {
-	font-size: 2rem;
-	margin-bottom: 20px;
+	font-size: 2.5rem; /* タイトルを大きく */
+	margin-bottom: 50px; /* タイトルと軸ラベルの距離を確保 */
+	color: #333; /* タイトルのカラーを濃い色に */
   }
   
   .timeline-container {
@@ -20,9 +21,9 @@
   
   .timeline {
 	position: relative;
-	width: 3px;
+	width: 4px; /* 軸を少し太く */
 	background-color: #3b82f6;
-	height: 600px;
+	height: 700px; /* 軸の長さを増加 */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -31,32 +32,36 @@
   
   .timeline-label {
 	position: absolute;
-	top: -30px;
-	font-size: 1rem;
-	color: #3b82f6;
-	background-color: #ffffff;
-	padding: 5px 10px;
-	border-radius: 5px;
+	top: -50px; /* 軸から離す */
+	font-size: 1.5rem; /* フォントサイズを大きく */
+	font-weight: bold; /* 太字で強調 */
+	color: #ffffff; /* テキストを白に */
+	background-color: #3b82f6; /* 軸と同じ色で統一感を持たせる */
+	padding: 10px 20px; /* 余白を広げて大きく見せる */
+	border-radius: 25px; /* 角を丸くしてモダンなデザインに */
 	transform: translateX(-50%);
-	left: 50%;
+	left: 50%; /* 中央揃え */
+	white-space: nowrap; /* ラベルが折り返されないようにする */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影を追加して目立たせる */
+	z-index: 10; /* 他の要素より前面に表示 */
   }
   
   .timeline-item {
 	position: relative;
 	opacity: 0;
-	transform: translateY(30px);
+	transform: translateY(30px); /* 初期状態を下にオフセット */
 	transition: all 0.5s ease-in-out;
 	margin: 20px 0;
   }
   
   .timeline-item.visible {
 	opacity: 1;
-	transform: translateY(0);
+	transform: translateY(0); /* 表示状態で元の位置に戻す */
   }
   
   .popup {
 	position: relative;
-	margin-top: 10px;
+	margin-top: 20px; /* ポップアップを軸から適切に離す */
 	background: #ffffff;
 	border: 1px solid #ddd;
 	border-radius: 10px;
