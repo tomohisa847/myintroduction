@@ -21,6 +21,18 @@ function Skills() {
       level: 3,
     },
     {
+      name: "C++",
+      image: "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
+      description: "クラスベースでゲームを授業内で開発しました。クラスの概念やクラス継承グローバル変数やローカル変数などを学びました。",
+      level: 4,
+    },
+    {
+      name: "JavaScript",
+      image: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+      description: "授業内で履修済みReactの基礎になるため自主的に勉強した。",
+      level: 3,
+    },
+    {
       name: "Python",
       image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
       description: "データ分析とスクリプト作成に使用しています。",
