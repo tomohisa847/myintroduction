@@ -30,6 +30,19 @@ const experiencesData = [
     ],
     link: "https://github.com/Kotaro0722/VitaLink",
   },
+  {
+    name: "URBAN SOPHIST設立",
+    images: [
+      "https://via.placeholder.com/150",
+      "https://via.placeholder.com/150",
+      "https://via.placeholder.com/150",
+    ],
+    description: [
+      {title: "プロジェクト概要",content: "自身でブランドを設立して商品企画からブランドコンセプト、またオンライン販売まで行いました。"},
+      {title: "苦労した点",content: "商品を企画する際にどのような商品を顧客に届けたいかをブランドコンセプトに合うように作成するのが困難だった。また販売ストアのUIの選定などかなり気を使った。"},
+      {title: "今後の展望",content: "今後は顧客獲得のためインスタグラムの投稿をつづけまたチラシ配りなどを行おうと考えている。"}
+    ]
+  }
 ];
 
 function Experience() {
