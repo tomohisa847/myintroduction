@@ -20,8 +20,8 @@ function About() {
           <InfoItem label="大学" content="公立諏訪東京理科大学" />
           <InfoItem label="学部/学科" content="工学部/情報応用工学科" />
           <InfoItem label="趣味" content="ゲーム,筋トレ,釣り,深夜ドライブ,中古車探し" details="筋トレはほぼ毎日ジムに行っています" />
-          <InfoItem label="参加プロジェクト" content="SUWA RPGプロジェクト,VitaLink" details="地域活性化を目的としたRPG開発プロジェクトです。富士見の病院の患者やカルテの管理をするアプリ開発を行うプロジェクトです" />
-          <InfoItem label="その他" content="URBAN SOPHIST 代表" details="自身で設立したファッションブランドです。自分が代表になっています。" />
+          <InfoItem label="参加プロジェクト" content="SUWA RPGプロジェクト" details="地域活性化を目的としたRPG開発プロジェクトです。現在は交渉が終了し開発のフェーズに突入していて連日開発をしています。主にマップの制作やイベントの作成など多岐にわたり開発をしています。特にマップ開発に関しては自身が大部分を占めており日々技術の向上を目指しています。" />
+          <InfoItem label="その他" content="URBAN SOPHIST 代表" details="自身で設立したファッションブランドです。現在はブランド名を変えてURBANSという内容のブランドを経営しております。今は一人で広報から商品開発、管理まで行っています。最近ではインフルエンサーなどに協力してもらい認知を広げている段階です。" />
         </div>
       </div>
     </section>

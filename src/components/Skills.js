@@ -24,7 +24,7 @@ function Skills() {
       name: "C++",
       image: "https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg",
       description: "クラスベースでゲームを授業内で開発しました。クラスの概念やクラス継承グローバル変数やローカル変数などを学びました。",
-      level: 4,
+      level: 3,
     },
     {
       name: "JavaScript",
@@ -33,10 +33,18 @@ function Skills() {
       level: 3,
     },
     {
+      name: "Node.js",
+      image: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+      description: "APIを用いてDiscordと連携したメモアプリを開発。OpenAI APIとNotion APIを使用し、Discord Botからメモができるようにした。",
+      level: 3,
+      link:"https://note.com/jazzy_crane4942/n/n3ef1392d08f1"
+    },
+    {
       name: "Python",
       image: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
-      description: "データ分析とスクリプト作成に使用しています。",
+      description: "また、大学の学生証（FeliCa対応）を用いた入退室管理システムを開発。Sony RC‑S380 NFCリーダー + pyscard で学生証のUIDを読み取り、入退室ログをGUI（tkinter）とCSVファイルで管理する仕組みを実装しました",
       level: 3,
+      link:"https://note.com/jazzy_crane4942/n/n3a1714506d2e"
     },
     {
       name: "HTML/CSS",
@@ -74,7 +82,15 @@ function SkillCard({ skill }) {
   return (
     <div style={styles.card}>
       <img src={skill.image} alt={skill.name} style={styles.skillImage} />
-      <h3 style={styles.skillName}>{skill.name}</h3>
+      <h3 style={styles.skillName}>
+        {skill.link ? (
+          <a href={skill.link} target="_blank" rel="noopener noreferrer" style={styles.link}>
+            {skill.name}
+          </a>
+        ) : (
+          skill.name
+        )}
+      </h3>
       <div style={styles.rating}>
         {"★".repeat(skill.level)}
         {"☆".repeat(5 - skill.level)}
@@ -83,6 +99,7 @@ function SkillCard({ skill }) {
     </div>
   );
 }
+
 
 const styles = {
   section: {
@@ -127,6 +144,10 @@ const styles = {
   skillDescription: {
     fontSize: "0.9em",
   },
+  link: {
+  color: "#60a5fa",
+  textDecoration: "none",
+  }
 };
 
 export default Skills;
