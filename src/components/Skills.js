@@ -6,7 +6,7 @@ function Skills() {
       name: "React",
       image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
       description: "このWebサイトを作成するのに使用しました。",
-      level: 2,
+      level: 3,
     },
     {
       name: "C言語",

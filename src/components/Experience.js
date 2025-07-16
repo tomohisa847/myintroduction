@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import SuwaRPG1 from "./img/experience/SuwaRPG (1).jpg";
 import SuwaRPG2 from "./img/experience/SuwaRPG (2).jpg";
 import SuwaRPG3 from "./img/experience/SuwaRPG (3).jpg";
+import UrbanSophist1 from "./img/experience/UrbanSophist.png";
+import UrbanSophist2 from "./img/experience/UrbanSophist2.png";
+import UrbanSophist3 from "./img/experience/LogoBlack.png";
 
 const experiencesData = [
   {
@@ -32,16 +35,13 @@ const experiencesData = [
   },
   {
     name: "URBAN SOPHIST設立",
-    images: [
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-    ],
+    images: [UrbanSophist1,UrbanSophist2,UrbanSophist3,],
     description: [
       {title: "プロジェクト概要",content: "自身でブランドを設立して商品企画からブランドコンセプト、またオンライン販売まで行いました。"},
       {title: "苦労した点",content: "商品を企画する際にどのような商品を顧客に届けたいかをブランドコンセプトに合うように作成するのが困難だった。また販売ストアのUIの選定などかなり気を使った。"},
       {title: "今後の展望",content: "今後は顧客獲得のためインスタグラムの投稿をつづけまたチラシ配りなどを行おうと考えている。"}
-    ]
+    ],
+    link: "https://urbansophist.paintory.com/",
   }
 ];
 
